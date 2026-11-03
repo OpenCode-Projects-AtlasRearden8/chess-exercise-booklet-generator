@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chess-exercise-booklet-generator"
+version = "1.0.0"
+description = "Offline, pure-Python CLI that turns .pgn games or puzzle sets into printable chess exercise booklets (SVG, large-print friendly, difficulty tagged)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["chess", "pgn", "puzzles", "svg", "printable", "booklet", "offline"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Games/Entertainment :: Board Games",
+]
+dependencies = []
+
+[project.scripts]
+chessbooklet = "chessbooklet.cli:main"
+
+[tool.setuptools]
+packages = ["chessbooklet"]
